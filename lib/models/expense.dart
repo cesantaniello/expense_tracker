@@ -1,4 +1,5 @@
 import 'package:uuid/uuid.dart';
+import 'package:expense_tracker/models/expense.dart';
 
 const uuid = Uuid();
 
