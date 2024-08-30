@@ -25,14 +25,25 @@ class _ExpensesState extends State<Expenses> {
       category: Category.leisure,
     ),    
   ];
+
   @override
   Widget build(BuildContext context) => Scaffold(
-          body: Column(
-        children: [
-          const Text('The chart'),
-          Expanded(child: 
-            ExpensesList(expenses: _registeredExpenses)
-          )
-        ],
-      ));
+    appBar: AppBar(
+      title: const Text('Flutter Expense Tracker'),
+      actions: [
+        IconButton(
+          onPressed: (){}, 
+          icon: const Icon(Icons.add),
+        )
+      ],
+    ),
+    body: Column(
+      children: [
+        const Text('The chart'),
+        Expanded(child: 
+          ExpensesList(expenses: _registeredExpenses)
+        )
+      ],
+    )
+  );
 }
